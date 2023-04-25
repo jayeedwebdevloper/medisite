@@ -7,17 +7,21 @@ window.addEventListener('scroll', (e) => {
     }
 });
 
-$(window).scroll(function() {
+$(window).scroll(function () {
     if (window.pageYOffset > 100) {
         $('.scroll-top').css({
-            'opacity' : '1',
+            'opacity': '1',
         });
     } else {
         $('.scroll-top').css({
-            'opacity' : '0',
+            'opacity': '0',
         });
     };
 });
-$('.scroll-top').click(function() {
+$('.scroll-top').click(function () {
     $('html, body').scrollTop('slow');
+});
+window.addEventListener('load', function () {
+    const loader = document.getElementById('preloader');
+    loader.style.display = 'none'
 });
